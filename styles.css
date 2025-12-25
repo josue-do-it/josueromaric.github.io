@@ -539,47 +539,36 @@ section {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
+    padding-left: 40px; /* espace pour la ligne */
 }
 
+/* Ligne verticale à gauche */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 0;  /* Déplace la ligne de la timeline à gauche */
-    transform: translateX(0);
+    left: 20px;
+    top: 0;
     width: 3px;
     height: 100%;
     background: var(--gradient-primary);
     border-radius: 3px;
 }
 
+/* Item */
 .timeline-item {
-    display: flex;
-    justify-content: flex-start; /* Les items sont alignés à gauche */
-    padding-left: 30px; /* Espace entre le bord gauche et les éléments */
     position: relative;
+    display: flex;
+    justify-content: flex-start;
     margin-bottom: 3rem;
+    padding-left: 60px; /* espace entre la ligne et la carte */
 }
 
-.timeline-item .timeline-content {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    margin-left: 60px; /* Espace entre le point et la carte */
-    width: 100%;
-}
-
-.timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px var(--accent-glow);
-    border-color: var(--accent);
-}
-
+/* Point sur la ligne */
 .timeline-dot {
     position: absolute;
-    left: -9px;  /* Place les points à gauche */
+    left: 20px;
+    top: 30px;
+    transform: translateX(-50%);
     width: 18px;
     height: 18px;
     background: var(--accent);
@@ -589,6 +578,25 @@ section {
     box-shadow: 0 0 20px var(--accent-glow);
 }
 
+/* Carte */
+.timeline-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+}
+
+/* Hover effet */
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px var(--accent-glow);
+    border-color: var(--accent);
+}
+
+/* Date */
 .timeline-date {
     color: var(--accent-light);
     font-weight: 600;
@@ -596,6 +604,7 @@ section {
     font-size: 0.9rem;
 }
 
+/* Titre */
 .timeline-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
@@ -603,17 +612,21 @@ section {
     color: var(--text-primary);
 }
 
+/* Entreprise */
 .timeline-company {
     color: var(--accent);
     margin-bottom: 0.8rem;
     font-weight: 500;
 }
 
+/* Description */
 .timeline-desc {
     color: var(--text-secondary);
     font-size: 0.95rem;
+    line-height: 1.6;
 }
 
+/* Badge / Grade */
 .timeline-grade {
     display: inline-block;
     background: var(--accent-glow);
