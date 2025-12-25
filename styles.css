@@ -537,7 +537,7 @@ section {
 ======================================== */
 .timeline {
     position: relative;
-    width: 80%;
+    width: 100%;
     max-width: none;
     /* max-width: 900px; */
     margin: 0 auto;
@@ -571,7 +571,7 @@ section {
     position: absolute;
     left: 20px;
     top: 30px;
-    transform: translateX(-50%);
+    transform: translateX(-100%);
     width: 18px;
     height: 18px;
     background: var(--accent);
@@ -589,7 +589,7 @@ section {
     border: 1px solid var(--border);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    max-width: 600px;
+    max-width: 900px;
 }
 
 /* Hover effet */
