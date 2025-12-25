@@ -532,6 +532,9 @@ section {
 /* ========================================
    TIMELINE
 ======================================== */
+/* ========================================
+   TIMELINE
+======================================== */
 .timeline {
     position: relative;
     max-width: 900px;
@@ -541,8 +544,8 @@ section {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;  /* Déplace la ligne de la timeline à gauche */
+    transform: translateX(0);
     width: 3px;
     height: 100%;
     background: var(--gradient-primary);
@@ -551,16 +554,15 @@ section {
 
 .timeline-item {
     display: flex;
-    justify-content: flex-end;
-    padding-right: calc(50% + 30px);
+    justify-content: flex-start; /* Aligne tous les éléments à gauche */
+    padding-left: 30px; /* Espace entre le bord gauche et les éléments */
     position: relative;
     margin-bottom: 3rem;
 }
 
 .timeline-item:nth-child(even) {
     justify-content: flex-start;
-    padding-right: 0;
-    padding-left: calc(50% + 30px);
+    padding-left: 30px;  /* Assure que tous les éléments sont bien à gauche */
 }
 
 .timeline-content {
@@ -580,8 +582,7 @@ section {
 
 .timeline-dot {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: -9px;  /* Ajuste la position de l'icône du cercle */
     width: 18px;
     height: 18px;
     background: var(--accent);
@@ -625,6 +626,7 @@ section {
     font-size: 0.85rem;
     margin-top: 0.8rem;
 }
+
 
 /* ========================================
    SKILLS - SMALLER CARDS
