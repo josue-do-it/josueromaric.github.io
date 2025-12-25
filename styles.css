@@ -554,24 +554,21 @@ section {
 
 .timeline-item {
     display: flex;
-    justify-content: flex-start; /* Aligne tous les éléments à gauche */
+    justify-content: flex-start; /* Les items sont alignés à gauche */
     padding-left: 30px; /* Espace entre le bord gauche et les éléments */
     position: relative;
     margin-bottom: 3rem;
 }
 
-.timeline-item:nth-child(even) {
-    justify-content: flex-start;
-    padding-left: 30px;  /* Assure que tous les éléments sont bien à gauche */
-}
-
-.timeline-content {
+.timeline-item .timeline-content {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 16px;
     border: 1px solid var(--border);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    margin-left: 60px; /* Espace entre le point et la carte */
+    width: 100%;
 }
 
 .timeline-content:hover {
@@ -582,7 +579,7 @@ section {
 
 .timeline-dot {
     position: absolute;
-    left: -9px;  /* Ajuste la position de l'icône du cercle */
+    left: -9px;  /* Place les points à gauche */
     width: 18px;
     height: 18px;
     background: var(--accent);
@@ -626,7 +623,6 @@ section {
     font-size: 0.85rem;
     margin-top: 0.8rem;
 }
-
 
 /* ========================================
    SKILLS - SMALLER CARDS
